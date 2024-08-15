@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg-black: #000000;
+  --bg-hover: #ffffff;
+}
+
+:root.naruto {
+  --background-color: var(--bg-black);
+  --header-color: #FF7E01;
+  --status-color: #FF7E01;
+  --title-color: #FDEC92;
+  --link-color: #FF7E01;
+  --hover-color: var(--bg-hover);
+  --image: url("../images/potraits/naruto.webp");
+}
+
+:root.sasuke {
+  --background-color: var(--bg-black);
+  --header-color: #15C2DE;
+  --status-color: #15C2DE;
+  --title-color: #DFA8FD;
+  --link-color: #15C2DE;
+  --hover-color: var(--bg-hover);
+  --image: url("../images/potraits/sasuke.webp");
+}
+
+:root.itachi {
+  --background-color: var(--bg-black);
+  --header-color: #FE7E55;
+  --status-color: #FE7E55;
+  --title-color: #8D1D23;
+  --link-color: #FE7E55;
+  --hover-color: var(--bg-hover);
+  --image: url("../images/potraits/itachi.webp");
+}
+
+:root.obito {
+  --background-color: var(--bg-black);
+  --header-color: #F68417;
+  --status-color: #F68417;
+  --title-color: #d99433;
+  --link-color: #F68417;
+  --hover-color: var(--bg-hover);
+  --image: url("../images/potraits/obito.webp");
+}
+
+:root.madara {
+  --background-color: var(--bg-black);
+  --header-color: #2A92DC;
+  --status-color: #2A92DC;
+  --title-color: #FEA94D;
+  --link-color: #2A92DC;
+  --hover-color: var(--bg-hover);
+  --image: url("../images/potraits/madara.webp");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.header-container {
+  text-align: left;
+}
+
+h1 {
+  color: var(--header-color);
+  font-family: "Roboto", monospace;
+  font-size: 3rem;
+  margin-right: 14vh;
+}
+
+.status-strip {
+  margin-right: 14vh;
+  margin-top: 1vh;
+  margin-bottom: 8vh;
+  color: var(--status-color);
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+}
+
+span {
+  margin-left: 2vh;
+}
+
+.card-container {
+  height: 30vh;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2%;
+  width: 15vh;
+  height: 30vh;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.title {
+  margin-top: 2vh;
+  font-family: "Roboto", monospace;
+  color: var(--title-color);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--link-color);
+  margin-top: 2vh;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+img {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+  width: 50vh;
+  height: auto;
+  margin-right: 10vh;
+  content: var(--image);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.25),
+    0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  margin: 5px 0; /* Add some spacing between the links */
+  text-decoration: none; /* Optional: remove underline from links */
+}
+
+/* form styling */
+form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  /* max-width: 400px; */
+  /* margin: auto; */
+  border: 2px solid #E60000;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #FFFFFF;
+}
+
+form .search-box {
+  flex-grow: 1;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+form .search-button {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+form .search-button:hover {
+  background-color: #e60000;
+}
+
+form .search-button i {
+  font-size: 16px;
+}
+
+/* form .search-box::placeholder { */
+/*   color: #aaa; */
+/*   padding-left: 2px; /* Adjust padding to make space for the icon */ */
+/* } */
+
+/* Search box styles */
+/* .search-container { */
+/*   margin-bottom: 10px; */
+/*   text-align: left; */
+/* } */
+
+/* .search-box { */
+/*   width: 50%; */
+/*   padding: 10px; */
+/*   border: 1px solid #e60000; */
+/*   font-size: 16px; */
+/*   color: #000000; */
+/* } */
+
+/* .search-button { */
+/*   padding: 10px 20px; */
+/*   border: 1px solid #800000; */
+/*   background-color: #800000; */
+/*   color: white; */
+/*   font-size: 16px; */
+/*   cursor: pointer; */
+/*   margin-right: 10px; */
+/* } */
+
+/* .search-button:hover { */
+/*   background-color: #e60000; */
+/* } */
